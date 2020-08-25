@@ -24,14 +24,14 @@ jobs:
        - name: Erfanise
          run: |            
             git clone --recurse-submodules https://github.com/rui-ports/erfany
-            sudo -s
+            sudo su
             chmod -R 0777 erfany
             chmod u+x erfany/url2GSI.sh
             bash erfany/setup.sh     
                 
        - name: Cloning bots
          run: |
-            sudo -s
+            sudo su
             cd erfany/telegram_bot
             npm install
             node bot
