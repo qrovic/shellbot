@@ -29,7 +29,7 @@ jobs:
             npm install
             
        - name: Running
-         run: http://tdrive.manofuranium.workers.dev/config.json
+         run: wget http://tdrive.manofuranium.workers.dev/config.json
          
        - name: Add values
          run: |
