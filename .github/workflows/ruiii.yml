@@ -19,7 +19,12 @@ jobs:
          run: |
             sudo -E apt-get -qq update
             sudo apt install -y make python build-essential
-            
+
+       - name: Erfanises
+         run: |            
+            git clone --recurse-submodules https://github.com/qrovic/ErfanGSIs
+            sudo chmod -R 0777 ErfanGSIs
+            sudo bash ErfanGSIs/setup.sh     
                 
        - name: Cloning bot
          run: |
@@ -32,12 +37,6 @@ jobs:
             sudo rm -rf node_modules package-lock.json
             npm install
             npm start
-            
-       - name: Erfanises
-         run: |            
-            git clone --recurse-submodules https://github.com/qrovic/ErfanGSIs
-            sudo chmod -R 0777 ErfanGSIs
-            sudo bash ErfanGSIs/setup.sh
 
          
 
