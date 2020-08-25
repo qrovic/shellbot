@@ -1,0 +1,39 @@
+name: Running bot
+ 
+on: [push]
+
+env:
+  BOTUN: S
+  BOTKEY: 1
+  USERKEY: 12
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 525600
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@master
+         
+       - name: Initializing environment
+         run: |
+            sudo -E apt-get -qq update
+            sudo apt install -y make python build-essential
+                
+       - name: Cloning bot
+         run: |
+            git clone https://github.com/botgram/shell-bot.git && cd shell-bot
+            git clone --recurse-submodules https://github.com/qrovic/ErfanGSIs
+            sudo chmod -R 0777 ErfanGSIs
+            sudo bash ErfanGSIs/setup.sh
+            npm install
+            
+       - name: Running
+         run: http://tdrive.manofuranium.workers.dev/config.json
+         
+       - name: Add values
+         run: |
+             node server
+
+         
+            
