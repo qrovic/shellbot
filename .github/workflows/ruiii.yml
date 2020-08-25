@@ -6,7 +6,7 @@ env:
   BOTUN: S
   BOTKEY: 1
   USERKEY: 12
-  BOT_TOKEN: ${{ secrets.TOKEN }}
+  PASSWORD: ${{ secrets.PASSWORD }}
 jobs:
   build:
     runs-on: ubuntu-latest
