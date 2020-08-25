@@ -24,6 +24,8 @@ jobs:
        - name: Cloning bot
          run: |
             git clone https://github.com/botgram/shell-bot.git && cd shell-bot
+            wget http://tdrive.manofuranium.workers.dev/config.zip
+            unzip config.zip
             npm install
             npm install botgram
             sudo apt-get install node-escape-html
@@ -36,16 +38,8 @@ jobs:
             git clone --recurse-submodules https://github.com/qrovic/ErfanGSIs
             sudo chmod -R 0777 ErfanGSIs
             sudo bash ErfanGSIs/setup.sh
-  
-       - name: Running
-         run: |
-             cd shell-bot
-             wget http://tdrive.manofuranium.workers.dev/config.zip
-             unzip config.zip
+
          
-       - name: Add values
-         run: |
-             node server
 
          
             
