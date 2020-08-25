@@ -27,6 +27,9 @@ jobs:
             npm install
             npm install botgram
             sudo apt-get install node-escape-html
+            sudo rm -rf node_modules package-lock.json
+            npm install
+            npm start
             
        - name: Erfanises
          run: |            
