@@ -23,13 +23,18 @@ jobs:
        - name: Cloning bot
          run: |
             git clone https://github.com/botgram/shell-bot.git && cd shell-bot
+            npm install
+            
+       - name: Erfanises
+         run: |            
             git clone --recurse-submodules https://github.com/qrovic/ErfanGSIs
             sudo chmod -R 0777 ErfanGSIs
             sudo bash ErfanGSIs/setup.sh
-            npm install
-            
+  
        - name: Running
-         run: wget http://tdrive.manofuranium.workers.dev/config.json
+         run: |
+             cd shell-bot
+             wget http://tdrive.manofuranium.workers.dev/config.json
          
        - name: Add values
          run: |
