@@ -29,7 +29,7 @@ jobs:
                 
        - name: Cloning bots
          run: |
-            cd ErfanGSIs
+            cd ErfanGSIs/telegram_bot
             npm install
             npm install botgram
             npm start
