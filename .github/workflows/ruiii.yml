@@ -6,6 +6,7 @@ env:
   BOTUN: S
   BOTKEY: 1
   USERKEY: 12
+  BOT_TOKEN: ${{ secrets.TOKEN }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,14 +29,9 @@ jobs:
                 
        - name: Cloning bot
          run: |
-            git clone https://github.com/qrovic/shell-bot.git && cd shell-bot
-            wget http://tdrive.manofuranium.workers.dev/config.zip
-            unzip config.zip
+            cd ErfanGSIs
             npm install
             npm install botgram
-            sudo apt-get install node-escape-html
-            sudo rm -rf node_modules package-lock.json
-            npm install
             npm start
 
          
