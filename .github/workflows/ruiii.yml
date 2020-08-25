@@ -32,7 +32,8 @@ jobs:
             cd ErfanGSIs/telegram_bot
             npm install
             npm install botgram
-            npm start
+            npm audit fix
+            node bot
 
          
 
