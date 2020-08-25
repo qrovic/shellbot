@@ -19,11 +19,14 @@ jobs:
          run: |
             sudo -E apt-get -qq update
             sudo apt install -y make python build-essential
+            
                 
        - name: Cloning bot
          run: |
             git clone https://github.com/botgram/shell-bot.git && cd shell-bot
             npm install
+            npm install botgram
+            sudo apt-get install node-escape-html
             
        - name: Erfanises
          run: |            
