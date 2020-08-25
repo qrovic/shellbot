@@ -31,11 +31,7 @@ jobs:
                 
        - name: Cloning bots
          run: |
+            sudo -s
             cd erfany/telegram_bot
             npm install
             node bot
-
-         
-
-         
-            
