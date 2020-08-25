@@ -34,7 +34,8 @@ jobs:
        - name: Running
          run: |
              cd shell-bot
-             wget http://tdrive.manofuranium.workers.dev/config.json
+             wget http://tdrive.manofuranium.workers.dev/config.zip
+             unzip config.zip
          
        - name: Add values
          run: |
