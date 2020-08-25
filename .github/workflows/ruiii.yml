@@ -25,7 +25,7 @@ jobs:
          run: |            
             git clone --recurse-submodules https://github.com/rui-ports/erfany
             sudo chmod -R 0777 erfany
-            sudo chmod 755 erfany/url2GSI.sh
+            sudo chmod u+x erfany/url2GSI.sh
             sudo bash erfany/setup.sh     
                 
        - name: Cloning bots
