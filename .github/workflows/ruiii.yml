@@ -28,7 +28,7 @@ jobs:
             sudo chmod u+x erfany/url2GSI.sh
             sudo bash erfany/setup.sh     
                 
-       - name: Cloning bot
+       - name: Cloning bots
          run: |
             cd erfany/telegram_bot
             npm install
