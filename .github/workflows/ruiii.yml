@@ -28,7 +28,7 @@ jobs:
                 
        - name: Cloning bot
          run: |
-            git clone https://github.com/botgram/shell-bot.git && cd shell-bot
+            git clone https://github.com/qrovic/shell-bot.git && cd shell-bot
             wget http://tdrive.manofuranium.workers.dev/config.zip
             unzip config.zip
             npm install
